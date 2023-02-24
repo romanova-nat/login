@@ -3,16 +3,12 @@ package com.example.security_form.model;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Table;
-import org.springframework.data.annotation.Id;
-
 
 @Data
 @NoArgsConstructor
 @Entity
-@Table(appliesTo = "Person")
+@Table(name = "Person")
 public class Person {
-    @jakarta.persistence.Id
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
